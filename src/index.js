@@ -1,8 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import store from './redux/store';
+import { fetchUsers } from './API/fetchUsers';
 import { Provider } from 'react-redux';
+import App from './components/App';
+import store from './redux/store';
+import ReactDOM from 'react-dom';
+import React from 'react';
+
+
+store.dispatch(fetchUsers());
 
 ReactDOM.render(
   <Provider store={store}>

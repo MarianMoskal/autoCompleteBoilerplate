@@ -1,10 +1,11 @@
-//import reducer!!!!!
-// import { createStore } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { usersReducer } from './reducers';
 import thunk from 'redux-thunk';
 
-const reducer = (state = {}, action) => state;
+const rootReducer = combineReducers({
+    users: usersReducer
+})
 
-let store = createStore(reducer, applyMiddleware(thunk));
+let store = createStore(rootReducer, applyMiddleware(thunk));
 
 export default store;
