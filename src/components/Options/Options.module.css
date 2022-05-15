@@ -1,0 +1,21 @@
+.optionsContainer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.subInput {
+  height: 35px;
+  width: 202px;
+  border: 1px solid black;
+  padding: 1px 2px;
+  display: flex;
+  align-items: center;
+  border-top: none;
+}
+
+.subInput:hover {
+  background-color: antiquewhite;
+}
